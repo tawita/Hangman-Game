@@ -1,0 +1,9 @@
+<aura:component access="global">
+    <aura:attribute name="character" type="List" default="['A','B','C','D','E','F','G',
+    'H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Z','Y','Z']"/>
+
+    <aura:iteration items="{!v.character}" var="character" >
+        <c:buttonChar character= "{!character}"/>
+    </aura:iteration>
+
+    </aura:component>	

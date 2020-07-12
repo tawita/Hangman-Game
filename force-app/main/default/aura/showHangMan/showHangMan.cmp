@@ -1,0 +1,35 @@
+<aura:component access="global">
+    <aura:attribute name="count" type="Integer" />
+    <aura:attribute name="image" type="List" />
+    
+    <aura:if isTrue="{!v.count}">
+        <aura:if isTrue="{! (v.count == 1)}">
+            <img style="height:200px;" src="{!$Resource.image1}"/>
+        </aura:if>
+        <aura:if isTrue="{! (v.count == 2)}">
+            <img style="height:200px;" src="{!$Resource.image2}"/>
+        </aura:if>
+        <aura:if isTrue="{! (v.count == 3)}">
+            <img style="height:200px;" src="{!$Resource.image3}"/>
+        </aura:if>
+        <aura:if isTrue="{! (v.count == 4)}">
+            <img style="height:200px;" src="{!$Resource.image4}"/>
+        </aura:if>
+        <aura:if isTrue="{! (v.count == 5)}">
+            <img style="height:200px;" src="{!$Resource.image5}"/>
+        </aura:if>
+        <aura:if isTrue="{! (v.count == 6)}">
+            <img style="height:200px;" src="{!$Resource.image6}"/>
+        </aura:if>
+        <aura:if isTrue="{! (v.count == 7)}">
+            <img style="height:200px;" src="{!$Resource.image7}"/>
+        </aura:if>
+        <aura:if isTrue="{! (v.count >= 8)}">
+            <img style="height:200px;" src="{!$Resource.image8}"/>
+        </aura:if>
+        <aura:set attribute="else">
+            <img style="height:200px;" src="{!$Resource.image1}"/>
+        </aura:set>
+    </aura:if>
+   
+</aura:component>	

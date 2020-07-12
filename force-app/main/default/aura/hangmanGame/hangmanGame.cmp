@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="count" type="Integer"/>    
+    <aura:handler name="countSelect" event="c:countSelect" action="{!c.onCount}"/>
+
+    <lightning:card title="Hangman Game">
+        <lightning:layout horizontalAlign="center" verticalAlign="end"> 
+            <lightning:layoutItem padding="around-small">
+                <c:showHangMan count="{!v.count}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+
+    <lightning:card title="Choose Character">
+        <lightning:layout horizontalAlign="center" verticalAlign="end"> 
+            <lightning:layoutItem padding="around-small">
+                <c:showCharacter/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    
+</aura:component>	

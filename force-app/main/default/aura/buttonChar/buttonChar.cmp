@@ -1,0 +1,10 @@
+<aura:component access="global">
+    <aura:attribute name="character" type="String" />
+    <aura:attribute name="hideButton" type="Boolean" default="true"/>
+    <aura:registerEvent name="selectChar" type="c:selectChar"/> 
+
+    <aura:if isTrue="{!v.hideButton}">
+        <lightning:button class="action-btns" aura:id="button"  label="" value="{!v.character}" onclick="{!c.getInput}" > {!v.character} </lightning:button>
+    </aura:if>
+    
+</aura:component>	
